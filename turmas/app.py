@@ -98,7 +98,6 @@ with aba_chamada:
                 st.caption(f"ID: {aluno.get('id', '')}")
 
             with col_opcao:
-                # Agora são 3 escolhas: VAI COMER, NÃO VAI (desistente) e FALTOU
                 escolha = st.segmented_control(
                     label=f"Status {aluno.get('id', '')}",
                     options=["VAI COMER", "NÃO VAI", "FALTOU"],
@@ -120,10 +119,6 @@ with aba_chamada:
 
             for aluno in alunos:
                 status_opcao = respostas.get(aluno.get("id"), "VAI COMER")
-                
-                # Regras do negócio:
-                # - PRESENTE: quem vai comer ou quem não quer comer
-                # - AUSENTE: quem faltou à escola
                 status_presenca = "AUSENTE" if status_opcao == "FALTOU" else "PRESENTE"
                 vai_comer = True if status_opcao == "VAI COMER" else False
 
@@ -132,9 +127,9 @@ with aba_chamada:
                         "id": aluno.get("id"),
                         "nome": aluno.get("nome"),
                         "qr": aluno.get("qr"),
-                        "status": status_opcao,          # 'VAI COMER', 'NÃO VAI', 'FALTOU'
-                        "presenca": status_presenca,    # 'PRESENTE' ou 'AUSENTE'
-                        "vai_comer": vai_comer,         # True ou False (para a cozinha)
+                        "status": status_opcao,
+                        "presenca": status_presenca,
+                        "vai_comer": vai_comer,
                         "turma": nome_turma_limpo,
                         "data": datetime.now().strftime("%Y-%m-%d"),
                     }
@@ -181,11 +176,10 @@ with aba_dashboard:
     else:
         df = pd.DataFrame(todos_dados)
 
-        # Garantir compatibilidade com relatórios antigos que não tinham a coluna 'status'
         if "status" not in df.columns:
             df["status"] = df["vai_comer"].map({True: "VAI COMER", False: "NÃO VAI"})
 
-        # MÉTRICAS PRINCIPAIS (CARDS)
+        # MÉTRICAS PRINCIPAIS
         total_alunos = len(df)
         total_comer = len(df[df["status"] == "VAI COMER"])
         total_nao_comer = len(df[df["status"] == "NÃO VAI"])
@@ -217,7 +211,7 @@ with aba_dashboard:
 
         st.markdown("---")
 
-        # SEÇÃO UNIFICADA DE FALTOSOS (DIREÇÃO / COORDENAÇÃO)
+        # SEÇÃO UNIFICADA DE FALTOSOS
         st.subheader("🚨 Controle Unificado de Alunos Faltosos (Imediato)")
         
         df_faltosos = df[df["status"] == "FALTOU"].sort_values(
@@ -229,14 +223,12 @@ with aba_dashboard:
         else:
             st.warning(f"⚠️ Atenção: {len(df_faltosos)} aluno(s) faltoso(s) identificado(s) hoje.")
             
-            # Tabela limpa e unificada para a coordenação agir rápido
             st.dataframe(
                 df_faltosos[["turma", "id", "nome"]],
                 use_container_width=True,
                 hide_index=True,
             )
 
-            # Botão de download rápido do relatório de faltosos em CSV
             csv_faltosos = df_faltosos[["turma", "id", "nome"]].to_csv(index=False).encode('utf-8')
             st.download_button(
                 label="📥 Baixar Lista Unificada de Faltosos (CSV)",
@@ -263,8 +255,7 @@ with aba_dashboard:
             by=["turma", "nome"], key=lambda col: col.str.lower()
         )
 
-        # Mapeamento com Ícones
-         status_map = {
+        status_map = {
             "VAI COMER": "✅ VAI COMER",
             "NÃO VAI": "🟠 NÃO VAI",
             "FALTOU": "🔴 FALTOU À ESCOLA"
