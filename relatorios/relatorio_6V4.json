@@ -1,0 +1,274 @@
+[
+  {
+    "id": "219522",
+    "nome": "ALICE BENECKE DE CARVALHO",
+    "qr": "219522.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "900565",
+    "nome": "ALICE DOS SANTOS BARBOSA",
+    "qr": "900565.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "900065",
+    "nome": "AMANDA SANTOS DUARTE",
+    "qr": "900065.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "897661",
+    "nome": "ANA RILLARY REBONATO NASCIMENTO",
+    "qr": "897661.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "869740",
+    "nome": "ANA VITORIA ELIAS DE MOURA",
+    "qr": "869740.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "875133",
+    "nome": "DAVI DE FREITAS CARDOSO",
+    "qr": "875133.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "893746",
+    "nome": "DAVI HENRIQUE FONTONI NETO",
+    "qr": "893746.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "878474",
+    "nome": "DAVI HENRIQUE FRITZ SOUZA SILVA",
+    "qr": "878474.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "873656",
+    "nome": "DAVI LUCAS DIAS ALVES",
+    "qr": "873656.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "894437",
+    "nome": "DAVI MIGUEL TEODORO LARANJEIRA",
+    "qr": "894437.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "885744",
+    "nome": "EDUARDO DE MIRANDA MACHADO AMARAL CARNEIRO",
+    "qr": "885744.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "870380",
+    "nome": "ENZO CESAR DE DEUS DA SILVA",
+    "qr": "870380.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "918080",
+    "nome": "FELIPE BUECKER EVANGELISTA",
+    "qr": "918080.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "868015",
+    "nome": "GUSTAVO CESAR ARRUDA",
+    "qr": "868015.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "874656",
+    "nome": "JOAO MIGUEL CORBELARI RIBEIRO",
+    "qr": "874656.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "897910",
+    "nome": "JOSE MIGUEL FERREIRA GARCIA",
+    "qr": "897910.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "871166",
+    "nome": "JUAN MULLER LINO CHAVES",
+    "qr": "871166.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "890331",
+    "nome": "LAURA HELEM SANTOS",
+    "qr": "890331.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "882817",
+    "nome": "LUCIANO GUILHERME BRANDAO OLIVEIRA",
+    "qr": "882817.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "870902",
+    "nome": "LUIZA BETINI DAVILA",
+    "qr": "870902.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "891005",
+    "nome": "MARIA JULIA SANTANA DE SOUZA",
+    "qr": "891005.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "889105",
+    "nome": "MARIA LUIZA SILVA DE BRITO",
+    "qr": "889105.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "887470",
+    "nome": "MARIA VITORIA FAVERO ANDRADE",
+    "qr": "887470.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "890318",
+    "nome": "MARIANA SILVA DE SOUZA",
+    "qr": "890318.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "875855",
+    "nome": "MICAELLY ODILIA MEDEIROS LARA",
+    "qr": "875855.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "872776",
+    "nome": "MIGUEL HENRIQUE LUIZ DE SOUZA",
+    "qr": "872776.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "868320",
+    "nome": "NICKACYA DUARTE DE OLIVEIRA",
+    "qr": "868320.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "875124",
+    "nome": "NICOLLY DE PAULA MIRANDA GUIMARAES",
+    "qr": "875124.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "873849",
+    "nome": "RAIRA FERNANDES BANDEIRA",
+    "qr": "873849.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "898410",
+    "nome": "SAMUEL HENRIQUE DE ASSIS",
+    "qr": "898410.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "889533",
+    "nome": "STELLA TOLENTINO",
+    "qr": "889533.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "887789",
+    "nome": "TALITA TEIXEIRA MURAD",
+    "qr": "887789.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "901082",
+    "nome": "YCARO KAUA VIANA RAMOS",
+    "qr": "901082.1.32037171",
+    "vai_comer": true,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "880793",
+    "nome": "YSSLA GABRIELA RIBEIRO LEITE MARTINS",
+    "qr": "880793.1.32037171",
+    "vai_comer": false,
+    "turma": "6V4",
+    "data": "2026-09-18"
+  }
+]
