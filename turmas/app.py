@@ -23,8 +23,8 @@ def salvar_relatorio_github(relatorio, nome_turma):
         return False
 
     data_hoje = datetime.now().strftime("%Y-%m-%d")
-    
-    # NOME FIXO DA TURMA: Sobrescreve o arquivo existente no GitHub a cada novo dia/envio
+
+    # NOME FIXO DA TURMA: Sobrescreve o relatório da mesma turma a cada novo dia/envio
     nome_arquivo = f"relatorio_{nome_turma}.json"
     caminho_no_repo = f"relatorios/{nome_arquivo}"
 
@@ -68,7 +68,7 @@ with aba_chamada:
     st.title("🍽️ Chamada da Merenda")
 
     PASTA_TURMAS = "turmas"
-    # Adicionada ordenação alfabética (sorted) nos arquivos de turmas
+    # Turmas organizadas em ordem alfabética
     arquivos_turmas = (
         sorted([f for f in os.listdir(PASTA_TURMAS) if f.endswith(".json")])
         if os.path.exists(PASTA_TURMAS)
@@ -85,7 +85,10 @@ with aba_chamada:
 
         with open(caminho_json, "r", encoding="utf-8") as f:
             alunos = json.load(f)
-alunos = sorted(alunos, key=lambda x: x["nome"])
+
+        # ORDENAÇÃO ALFABÉTICA DOS ALUNOS DA SALA
+        alunos = sorted(alunos, key=lambda x: str(x.get("nome", "")).lower())
+
         st.markdown("---")
 
         respostas = {}
@@ -93,18 +96,18 @@ alunos = sorted(alunos, key=lambda x: x["nome"])
             col_nome, col_opcao = st.columns([3, 2])
 
             with col_nome:
-                st.markdown(f"**{aluno['nome']}**")
-                st.caption(f"ID: {aluno['id']}")
+                st.markdown(f"**{aluno.get('nome', '')}**")
+                st.caption(f"ID: {aluno.get('id', '')}")
 
             with col_opcao:
                 escolha = st.segmented_control(
-                    label=f"Status {aluno['id']}",
+                    label=f"Status {aluno.get('id', '')}",
                     options=["VAI COMER", "NÃO VAI"],
                     default="VAI COMER",
-                    key=f"status_{aluno['id']}_{turma_arquivo}",
+                    key=f"status_{aluno.get('id', '')}_{turma_arquivo}",
                     label_visibility="collapsed",
                 )
-                respostas[aluno["id"]] = escolha
+                respostas[aluno.get("id")] = escolha
 
         st.markdown("---")
 
@@ -116,11 +119,11 @@ alunos = sorted(alunos, key=lambda x: x["nome"])
             nome_turma_limpo = turma_arquivo.replace(".json", "")
             relatorio = [
                 {
-                    "id": aluno["id"],
-                    "nome": aluno["nome"],
-                    "qr": aluno["qr"],
+                    "id": aluno.get("id"),
+                    "nome": aluno.get("nome"),
+                    "qr": aluno.get("qr"),
                     "vai_comer": True
-                    if respostas.get(aluno["id"], "VAI COMER") == "VAI COMER"
+                    if respostas.get(aluno.get("id"), "VAI COMER") == "VAI COMER"
                     else False,
                     "turma": nome_turma_limpo,
                     "data": datetime.now().strftime("%Y-%m-%d"),
@@ -207,7 +210,6 @@ with aba_dashboard:
 
         # TABELA DETALHADA / FILTRO COZINHA
         st.subheader("📋 Lista de Conferência da Cozinha")
-        # Turmas organizadas em ordem alfabética no Selectbox do filtro
         turmas_disponiveis = sorted(df["turma"].unique())
         turma_filtro = st.selectbox(
             "Filtrar lista por turma:", ["TODAS"] + list(turmas_disponiveis)
@@ -217,6 +219,11 @@ with aba_dashboard:
             df_exibicao = df[df["turma"] == turma_filtro]
         else:
             df_exibicao = df
+
+        # Ordena a tabela do dashboard também por nome do aluno em ordem alfabética
+        df_exibicao = df_exibicao.sort_values(
+            by=["turma", "nome"], key=lambda col: col.str.lower()
+        )
 
         df_exibicao["Status"] = df_exibicao["vai_comer"].map(
             {True: "✅ VAI COMER", False: "❌ NÃO VAI"}
