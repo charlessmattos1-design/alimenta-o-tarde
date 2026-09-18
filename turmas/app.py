@@ -65,10 +65,9 @@ aba_chamada, aba_dashboard = st.tabs(
 # ABA 1: CHAMADA EM SALA DE AULA
 # ==============================================================================
 with aba_chamada:
-    st.title("🍽️ Chamada da Merenda")
+    st.title("🍽️ Chamada da Merenda & Frequência")
 
     PASTA_TURMAS = "turmas"
-    # Turmas organizadas em ordem alfabética
     arquivos_turmas = (
         sorted([f for f in os.listdir(PASTA_TURMAS) if f.endswith(".json")])
         if os.path.exists(PASTA_TURMAS)
@@ -86,7 +85,6 @@ with aba_chamada:
         with open(caminho_json, "r", encoding="utf-8") as f:
             alunos = json.load(f)
 
-        # ORDENAÇÃO ALFABÉTICA DOS ALUNOS DA SALA
         alunos = sorted(alunos, key=lambda x: str(x.get("nome", "")).lower())
 
         st.markdown("---")
@@ -100,9 +98,10 @@ with aba_chamada:
                 st.caption(f"ID: {aluno.get('id', '')}")
 
             with col_opcao:
+                # Agora são 3 escolhas: VAI COMER, NÃO VAI (desistente) e FALTOU
                 escolha = st.segmented_control(
                     label=f"Status {aluno.get('id', '')}",
-                    options=["VAI COMER", "NÃO VAI"],
+                    options=["VAI COMER", "NÃO VAI", "FALTOU"],
                     default="VAI COMER",
                     key=f"status_{aluno.get('id', '')}_{turma_arquivo}",
                     label_visibility="collapsed",
@@ -117,19 +116,29 @@ with aba_chamada:
             use_container_width=True,
         ):
             nome_turma_limpo = turma_arquivo.replace(".json", "")
-            relatorio = [
-                {
-                    "id": aluno.get("id"),
-                    "nome": aluno.get("nome"),
-                    "qr": aluno.get("qr"),
-                    "vai_comer": True
-                    if respostas.get(aluno.get("id"), "VAI COMER") == "VAI COMER"
-                    else False,
-                    "turma": nome_turma_limpo,
-                    "data": datetime.now().strftime("%Y-%m-%d"),
-                }
-                for aluno in alunos
-            ]
+            relatorio = []
+
+            for aluno in alunos:
+                status_opcao = respostas.get(aluno.get("id"), "VAI COMER")
+                
+                # Regras do negócio:
+                # - PRESENTE: quem vai comer ou quem não quer comer
+                # - AUSENTE: quem faltou à escola
+                status_presenca = "AUSENTE" if status_opcao == "FALTOU" else "PRESENTE"
+                vai_comer = True if status_opcao == "VAI COMER" else False
+
+                relatorio.append(
+                    {
+                        "id": aluno.get("id"),
+                        "nome": aluno.get("nome"),
+                        "qr": aluno.get("qr"),
+                        "status": status_opcao,          # 'VAI COMER', 'NÃO VAI', 'FALTOU'
+                        "presenca": status_presenca,    # 'PRESENTE' ou 'AUSENTE'
+                        "vai_comer": vai_comer,         # True ou False (para a cozinha)
+                        "turma": nome_turma_limpo,
+                        "data": datetime.now().strftime("%Y-%m-%d"),
+                    }
+                )
 
             with st.spinner("Enviando chamada para a nuvem..."):
                 sucesso = salvar_relatorio_github(relatorio, nome_turma_limpo)
@@ -144,8 +153,8 @@ with aba_chamada:
 # ABA 2: DASHBOARD EXECUTIVO PARA A DIREÇÃO E COZINHA
 # ==============================================================================
 with aba_dashboard:
-    st.title("📊 Visão Geral da Merenda do Dia")
-    st.caption("Consolidação em tempo real das intenções enviadas pelas salas")
+    st.title("📊 Painel da Cozinha & Coordenação")
+    st.caption("Consolidação em tempo real das intenções e faltas enviadas pelas salas")
 
     PASTA_RELATORIOS = "relatorios"
     relatorios_locais = (
@@ -172,47 +181,77 @@ with aba_dashboard:
     else:
         df = pd.DataFrame(todos_dados)
 
+        # Garantir compatibilidade com relatórios antigos que não tinham a coluna 'status'
+        if "status" not in df.columns:
+            df["status"] = df["vai_comer"].map({True: "VAI COMER", False: "NÃO VAI"})
+
         # MÉTRICAS PRINCIPAIS (CARDS)
         total_alunos = len(df)
-        total_comer = len(df[df["vai_comer"] == True])
-        total_nao_comer = len(df[df["vai_comer"] == False])
-        taxa_adesao = (
-            (total_comer / total_alunos * 100) if total_alunos > 0 else 0
-        )
+        total_comer = len(df[df["status"] == "VAI COMER"])
+        total_nao_comer = len(df[df["status"] == "NÃO VAI"])
+        total_faltosos = len(df[df["status"] == "FALTOU"])
 
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Alunos Registrados", total_alunos)
-        col2.metric("🍽️ Vão Almoçar/Lanchar", total_comer)
+        col2.metric("🍽️ Vão Comer", total_comer)
         col3.metric("❌ Não Querem Merenda", total_nao_comer)
-        col4.metric("📈 Taxa de Adesão", f"{taxa_adesao:.1f}%")
+        col4.metric("🚨 Total de Faltosos", total_faltosos)
 
         st.markdown("---")
 
         # GRÁFICO COMPARATIVO POR TURMA
-        st.subheader("📌 Intenção de Refeição por Turma")
+        st.subheader("📌 Distribuição por Turma (Comer, Desistente, Faltoso)")
+        
         df_agrupado = (
-            df.groupby(["turma", "vai_comer"])
+            df.groupby(["turma", "status"])
             .size()
             .unstack(fill_value=0)
             .reset_index()
         )
 
-        if True in df_agrupado.columns and False in df_agrupado.columns:
-            df_agrupado.rename(
-                columns={True: "VAI COMER", False: "NÃO VAI"}, inplace=True
+        cols_grafico = [c for c in ["VAI COMER", "NÃO VAI", "FALTOU"] if c in df_agrupado.columns]
+        st.bar_chart(
+            df_agrupado.set_index("turma")[cols_grafico],
+            color=["#2e7d32", "#f57c00", "#d32f2f"][:len(cols_grafico)],
+        )
+
+        st.markdown("---")
+
+        # SEÇÃO UNIFICADA DE FALTOSOS (DIREÇÃO / COORDENAÇÃO)
+        st.subheader("🚨 Controle Unificado de Alunos Faltosos (Imediato)")
+        
+        df_faltosos = df[df["status"] == "FALTOU"].sort_values(
+            by=["turma", "nome"], key=lambda col: col.str.lower()
+        )
+
+        if df_faltosos.empty:
+            st.success("🎉 Nenhum aluno faltoso registrado até o momento!")
+        else:
+            st.warning(f"⚠️ Atenção: {len(df_faltosos)} aluno(s) faltoso(s) identificado(s) hoje.")
+            
+            # Tabela limpa e unificada para a coordenação agir rápido
+            st.dataframe(
+                df_faltosos[["turma", "id", "nome"]],
+                use_container_width=True,
+                hide_index=True,
             )
-            st.bar_chart(
-                df_agrupado.set_index("turma")[["VAI COMER", "NÃO VAI"]],
-                color=["#2e7d32", "#d32f2f"],
+
+            # Botão de download rápido do relatório de faltosos em CSV
+            csv_faltosos = df_faltosos[["turma", "id", "nome"]].to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="📥 Baixar Lista Unificada de Faltosos (CSV)",
+                data=csv_faltosos,
+                file_name=f"faltosos_unificados_{datetime.now().strftime('%Y-%m-%d')}.csv",
+                mime="text/csv",
             )
 
         st.markdown("---")
 
-        # TABELA DETALHADA / FILTRO COZINHA
-        st.subheader("📋 Lista de Conferência da Cozinha")
+        # TABELA DETALHADA PARA A COZINHA
+        st.subheader("📋 Lista de Conferência Geral / Cozinha")
         turmas_disponiveis = sorted(df["turma"].unique())
         turma_filtro = st.selectbox(
-            "Filtrar lista por turma:", ["TODAS"] + list(turmas_disponiveis)
+            "Filtrar lista da cozinha por turma:", ["TODAS"] + list(turmas_disponiveis)
         )
 
         if turma_filtro != "TODAS":
@@ -220,16 +259,20 @@ with aba_dashboard:
         else:
             df_exibicao = df
 
-        # Ordena a tabela do dashboard também por nome do aluno em ordem alfabética
         df_exibicao = df_exibicao.sort_values(
             by=["turma", "nome"], key=lambda col: col.str.lower()
         )
 
-        df_exibicao["Status"] = df_exibicao["vai_comer"].map(
-            {True: "✅ VAI COMER", False: "❌ NÃO VAI"}
-        )
+        # Mapeamento com Ícones
+         status_map = {
+            "VAI COMER": "✅ VAI COMER",
+            "NÃO VAI": "🟠 NÃO VAI",
+            "FALTOU": "🔴 FALTOU À ESCOLA"
+        }
+        df_exibicao["Status Detalhado"] = df_exibicao["status"].map(status_map)
+
         st.dataframe(
-            df_exibicao[["turma", "id", "nome", "Status"]],
+            df_exibicao[["turma", "id", "nome", "Status Detalhado"]],
             use_container_width=True,
             hide_index=True,
         )
