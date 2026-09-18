@@ -1,0 +1,282 @@
+[
+  {
+    "id": "341176",
+    "nome": "ANA LAURA DA SILVA LIMA REIS",
+    "qr": "341176.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "881506",
+    "nome": "ANA LAYSLA FABIANO",
+    "qr": "881506.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "323328",
+    "nome": "ANA LUISA MATIAS DE OLIVEIRA",
+    "qr": "323328.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "354150",
+    "nome": "ANNA BEATRYZ NEVES OLIVEIRA",
+    "qr": "354150.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "355953",
+    "nome": "ANNA JULIA SANTANA FAGUNDES DA SILVA",
+    "qr": "355953.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "336429",
+    "nome": "ARTHUR DA SILVA BONJARDIM",
+    "qr": "336429.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "334464",
+    "nome": "BRAYAN PREISIGKE LOPES",
+    "qr": "334464.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "321470",
+    "nome": "BRENNO CHAGAS MAIA DA SILVA",
+    "qr": "321470.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "324334",
+    "nome": "CAIO RAYLAN DA SILVA MOREIRA",
+    "qr": "324334.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "375484",
+    "nome": "CRISTIANO DA SILVA COUTINHO",
+    "qr": "375484.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "330231",
+    "nome": "DAVI FRANCISCO DIAS NETO",
+    "qr": "330231.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "335513",
+    "nome": "EDUARDO FIDELIS DE FREITAS",
+    "qr": "335513.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "353332",
+    "nome": "EMILY GIOVANA DA SILVA AMORIM",
+    "qr": "353332.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "379911",
+    "nome": "GUSTAVO RODRIGUES HULI FERNANDES",
+    "qr": "379911.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "911722",
+    "nome": "HELOYSA VICTORYA DE SOUZA SILVA",
+    "qr": "911722.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "346853",
+    "nome": "HEYTOR DO SACRAMENTO",
+    "qr": "346853.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "341560",
+    "nome": "IRAN MARTINS DA PAIXAO",
+    "qr": "341560.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "922515",
+    "nome": "JOAO PEDRO SOUZA FERREIRA",
+    "qr": "922515.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "352346",
+    "nome": "LUCAS DE SOUZA BARROS",
+    "qr": "352346.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "908998",
+    "nome": "MARIA HELOISA NASCIMENTO SILVA",
+    "qr": "908998.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "357426",
+    "nome": "MARIANA VICENTE PELISSARI",
+    "qr": "357426.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "334988",
+    "nome": "MARIANNY SANTOS QUEIROZ",
+    "qr": "334988.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "356093",
+    "nome": "MATHEUS AMARAL SILVA",
+    "qr": "356093.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "325785",
+    "nome": "MATHEUS BRAYAN KNACK ALVES",
+    "qr": "325785.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "397006",
+    "nome": "MAYRA DUQUE SILVA",
+    "qr": "397006.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "356803",
+    "nome": "MIGUEL DE OLIVEIRA PINHEIRO",
+    "qr": "356803.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "339651",
+    "nome": "MIGUEL HENRIQUE OLIVEIRA GONCALVES",
+    "qr": "339651.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "347907",
+    "nome": "NICOLLI VALENTIN BOLIS DOS SANTOS",
+    "qr": "347907.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "349172",
+    "nome": "PIETRA REBECA FIRMINO DOS SANTOS",
+    "qr": "349172.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "337404",
+    "nome": "RODRIGO SILVA SALES",
+    "qr": "337404.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "320866",
+    "nome": "SOPHIA DA MOTA BARROS",
+    "qr": "320866.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "351810",
+    "nome": "THAYSLLA VITORIA DA SILVA",
+    "qr": "351810.1.32037171",
+    "vai_comer": false,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "330227",
+    "nome": "VICTOR HUGO DOS SANTOS DA SILVA",
+    "qr": "330227.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "356381",
+    "nome": "WEYLLON LOPES TEIXEIRA",
+    "qr": "356381.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  },
+  {
+    "id": "322807",
+    "nome": "YURI FRAGA DA CRUZ",
+    "qr": "322807.1.32037171",
+    "vai_comer": true,
+    "turma": "7v5",
+    "data": "2026-09-18"
+  }
+]
