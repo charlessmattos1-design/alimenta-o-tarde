@@ -85,7 +85,7 @@ with aba_chamada:
 
         with open(caminho_json, "r", encoding="utf-8") as f:
             alunos = json.load(f)
-
+alunos = sorted(alunos, key=lambda x: x["nome"])
         st.markdown("---")
 
         respostas = {}
