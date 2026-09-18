@@ -3,6 +3,8 @@
     "id": "871221",
     "nome": "ADEGARD ANTHONY FALCAO GOMES",
     "qr": "871221.1.32037171",
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
     "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -11,6 +13,8 @@
     "id": "869500",
     "nome": "AGATHA VITORIA DA SILVA PEREIRA",
     "qr": "869500.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -19,6 +23,8 @@
     "id": "880129",
     "nome": "ALERRANDRO SANTOS DE ALMEIDA",
     "qr": "880129.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -27,7 +33,9 @@
     "id": "277870",
     "nome": "ALICE COSTA SANTOS SERPA",
     "qr": "277870.1.32037171",
-    "vai_comer": true,
+    "status": "NÃO VAI",
+    "presenca": "PRESENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -35,7 +43,9 @@
     "id": "875374",
     "nome": "ANA LUIZA FONSECA DO NASCIMENTO",
     "qr": "875374.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -43,6 +53,8 @@
     "id": "870511",
     "nome": "ANA VICTORIA GOMES QUIRINO",
     "qr": "870511.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -51,6 +63,8 @@
     "id": "896003",
     "nome": "ARTHUR ALVES DUARTE",
     "qr": "896003.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -59,6 +73,8 @@
     "id": "871294",
     "nome": "ARTHUR ANDRADE DE FREITAS",
     "qr": "871294.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -67,7 +83,9 @@
     "id": "868291",
     "nome": "ARTHUR MATEUS DE ABREU SA",
     "qr": "868291.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -75,6 +93,8 @@
     "id": "875986",
     "nome": "BRENDHA ALMEIDA COSTA",
     "qr": "875986.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -83,7 +103,9 @@
     "id": "907663",
     "nome": "BRUNA MEL MARINHO DE PAIVA",
     "qr": "907663.1.32037171",
-    "vai_comer": true,
+    "status": "NÃO VAI",
+    "presenca": "PRESENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -91,6 +113,8 @@
     "id": "874898",
     "nome": "CARLOS SANTOS DE PAULO",
     "qr": "874898.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -99,6 +123,8 @@
     "id": "909084",
     "nome": "DAVI EVANDRO GOMES DA SILVA",
     "qr": "909084.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -107,7 +133,9 @@
     "id": "909017",
     "nome": "ELOAH TEIXEIRA SOUZA",
     "qr": "909017.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -115,7 +143,9 @@
     "id": "892060",
     "nome": "ENZO GABRIEL GONCALVES TONON",
     "qr": "892060.1.32037171",
-    "vai_comer": true,
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -123,7 +153,9 @@
     "id": "169315",
     "nome": "ISABELA RORIZ LUCAS",
     "qr": "169315.1.32037171",
-    "vai_comer": true,
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -131,6 +163,8 @@
     "id": "876908",
     "nome": "ISADORA GONCALVES BARBOSA",
     "qr": "876908.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -139,6 +173,8 @@
     "id": "868610",
     "nome": "ISADORA MOTIM VIEIRA",
     "qr": "868610.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -147,7 +183,9 @@
     "id": "868853",
     "nome": "JOAO LUCAS MARTINS GOMES",
     "qr": "868853.1.32037171",
-    "vai_comer": true,
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -155,7 +193,9 @@
     "id": "871891",
     "nome": "JOSE ALFREDO ROCHA",
     "qr": "871891.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -163,6 +203,8 @@
     "id": "869418",
     "nome": "KALEB EMANUEL ALEXANDRINO DITTS",
     "qr": "869418.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -171,6 +213,8 @@
     "id": "878873",
     "nome": "KAROLINY SANTOS LOUREIRO",
     "qr": "878873.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -179,7 +223,9 @@
     "id": "897497",
     "nome": "KAUAN BARBOZA DOS SANTOS RODRIGUES",
     "qr": "897497.1.32037171",
-    "vai_comer": true,
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -187,6 +233,8 @@
     "id": "880510",
     "nome": "LAVINIA SOARES MOREIRA",
     "qr": "880510.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -195,6 +243,8 @@
     "id": "870251",
     "nome": "LAYS OLIVEIRA DO SACRAMENTO",
     "qr": "870251.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -203,6 +253,8 @@
     "id": "869413",
     "nome": "MARCEL ALCANTARA VIANA",
     "qr": "869413.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -211,7 +263,9 @@
     "id": "869678",
     "nome": "OLAVO NASCIMENTO TAVARES",
     "qr": "869678.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -219,6 +273,8 @@
     "id": "872202",
     "nome": "PIETRO VIEIRA DA CUNHA BARBOSA",
     "qr": "872202.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -227,6 +283,8 @@
     "id": "897813",
     "nome": "RAFAEL DE OLIVEIRA ROSA",
     "qr": "897813.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -235,7 +293,9 @@
     "id": "875136",
     "nome": "REGINA SOEIRO ANACLETO ALVARENGA ALMEIDA",
     "qr": "875136.1.32037171",
-    "vai_comer": true,
+    "status": "FALTOU",
+    "presenca": "AUSENTE",
+    "vai_comer": false,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -243,6 +303,8 @@
     "id": "873846",
     "nome": "SAMARA FARIA DE OLIVEIRA",
     "qr": "873846.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -251,6 +313,8 @@
     "id": "876296",
     "nome": "SAMUEL BATISTA DOS SANTOS FERNANDES",
     "qr": "876296.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
@@ -259,7 +323,9 @@
     "id": "874497",
     "nome": "SAMUEL DOS SANTOS ROBERTO",
     "qr": "874497.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -267,7 +333,9 @@
     "id": "872666",
     "nome": "SOPHIA DUARTE SANTOS",
     "qr": "872666.1.32037171",
-    "vai_comer": false,
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
+    "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
   },
@@ -275,6 +343,8 @@
     "id": "890099",
     "nome": "SOPHYA DE SOUZA ALVES",
     "qr": "890099.1.32037171",
+    "status": "VAI COMER",
+    "presenca": "PRESENTE",
     "vai_comer": true,
     "turma": "6V1",
     "data": "2026-09-18"
